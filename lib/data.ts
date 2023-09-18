@@ -32,6 +32,8 @@ export const links = [
     hash: "#contact",
   },
 ] as const;
+// as const is a TS feature to be a little more precise it will be these strings
+// but not any other string
 
 export const experiencesData = [
   {
