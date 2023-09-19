@@ -5,6 +5,9 @@ import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
+import ozbnbImg from "@/public/ozbnb.png";
+import geniusImg from "@/public/genius.png";
+import eCommerceImg from "@/public/ecommerce.png";
 
 export const links = [
   {
@@ -64,25 +67,28 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Genius",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "I made subscription-based AI tool offering Conversation, Image, Video, Music Generation, and Code Generation capabilities.",
+    tags: ["Next.js", "React", "TypeScript", "Tailwind", "Prisma", "Stripe"],
+    imageUrl: geniusImg,
+    link: "https://github.com/oguznsari/nextjs-ai-platform",
   },
   {
-    title: "rmtDev",
+    title: "E-commerce Application",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "I made an all-inclusive e-commerce application with a wide range of features designed to meet the needs of both Admin and Store components.",
+    tags: ["Next.js", "React", "TypeScript", "Tailwind", "Prisma", "Stripe"],
+    imageUrl: eCommerceImg,
+    link: "https://github.com/oguznsari/nextjs-e-commerce",
   },
   {
-    title: "Word Analytics",
+    title: "OzyBnb",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "I created an Airbnb clone with features like adding places, booking, authentication, and API documentation.",
+    tags: ["JavaScript", "NodeJS", "Express", "MongoDB", "tailwindCSS"],
+    imageUrl: ozbnbImg,
+    link: "https://github.com/oguznsari/booking",
   },
 ] as const;
 
