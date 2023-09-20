@@ -1,6 +1,6 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
+import { FaPlaneDeparture, FaReact, FaServer } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
@@ -40,28 +40,28 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Systems Engineer",
+    location: "Istanbul, Turkey",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+      "I worked as A-SMGCS Systems Engineer in Istanbul New Airport project. Installation and maintenance of Linux servers and workstations on ATC tower. 3rd party system integrations and admin responsibilities.",
+    icon: React.createElement(FaPlaneDeparture),
+    date: "2017 - 2020",
   },
   {
     title: "Full-Stack Developer",
-    location: "Houston, TX",
+    location: "Istanbul, Turkey",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "I worked as a full-stack developer for 3 years with LAMP stack. Mainly worked on features & performance improvements with PHP and MySQL on backend features beside UI features.",
+    icon: React.createElement(FaServer),
+    date: "2020 - 2023",
+  },
+  {
+    title: "Front-End Developer",
+    location: "Istanbul, Turkey",
+    description:
+      "Working as a front-end developer with expertise in React, Next.js, TypeScript, Tailwind CSS, Prisma, and MongoDB. Currently employed and open to new opportunities.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "2023 - present",
   },
 ] as const;
 
