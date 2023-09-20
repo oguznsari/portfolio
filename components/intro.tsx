@@ -9,12 +9,14 @@ import { HiDownload } from "react-icons/hi";
 
 import myImage from "@/public/cartoonoz.jpg";
 import { useSectionInView } from "@/lib/hooks";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 const thisYear = new Date().getFullYear();
 const yearsOfExperience = thisYear - 2018;
 
 const Intro = () => {
-  const { ref } = useSectionInView('Home', 0.5);
+  const { ref } = useSectionInView("Home", 0.5);
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section
@@ -39,7 +41,7 @@ const Intro = () => {
               height="192"
               quality="95"
               priority={true}
-              className="h-30 w-30 object-cover rounded-full 
+              className="h-30 w-30 object-cover rounded-full
                             border-[0.35rem] border-white shadow-xl"
             />
           </motion.div>
@@ -87,6 +89,10 @@ const Intro = () => {
                     px-7 py-3 flex items-center gap-2 rounded-full
                     outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950
                     active:scale-105 transition"
+          onClick={() => {
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now());
+          }}
         >
           Contact me here
           <BsArrowRight className="opacity-80 group-hover:translate-x-2 transition" />
@@ -94,7 +100,7 @@ const Intro = () => {
 
         <a
           className=" group bg-white px-7 py-3 flex items-center gap-2 rounded-full
-                    outline-none focus:scale-110 hover:scale-110 
+                    outline-none focus:scale-110 hover:scale-110
                     active:scale-105 transition cursor-pointer border border-black/10"
           href="/CV.pdf"
           download
@@ -104,8 +110,8 @@ const Intro = () => {
         </a>
 
         <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full 
-                    focus:scale-[1.15] hover:scale-[1.15] active:scale-105 hover:text-gray-950 transition 
+          className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full
+                    focus:scale-[1.15] hover:scale-[1.15] active:scale-105 hover:text-gray-950 transition
                     cursor-pointer border border-black/10"
           href="https://www.linkedin.com/in/oguznsari"
           target="_blank"
@@ -114,8 +120,8 @@ const Intro = () => {
         </a>
 
         <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full 
-                    focus:scale-[1.15] hover:scale-[1.15] active:scale-105 hover:text-gray-950 transition 
+          className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full
+                    focus:scale-[1.15] hover:scale-[1.15] active:scale-105 hover:text-gray-950 transition
                     cursor-pointer border border-black/10"
           href="https://github.com/oguznsari"
           target="_blank"
