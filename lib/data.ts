@@ -56,10 +56,10 @@ export const experiencesData = [
     date: "2020 - 2023",
   },
   {
-    title: "Front-End Developer",
+    title: "Full-Stack Developer",
     location: "Istanbul, Turkey",
     description:
-      "Working as a front-end developer with expertise in React, Next.js, TypeScript, Tailwind CSS, Prisma, and MongoDB. Currently employed and open to new opportunities.",
+      "Working as a full-stack developer with expertise in React, Next.js, TypeScript, Tailwind CSS, Prisma, and MongoDB. Currently employed and open to new opportunities.",
     icon: React.createElement(FaReact),
     date: "2023 - present",
   },
