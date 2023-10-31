@@ -1,14 +1,12 @@
 import Header from "@/components/header";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { GeistSans, GeistMono } from "geist/font";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
-
-const inter = Inter({ subsets: ["latin"] });
 
 const thisYear = new Date().getFullYear();
 const yearsOfExperience = thisYear - 2018;
@@ -24,9 +22,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html
+      lang="en"
+      className={`!scroll-smooth ${GeistSans.variable} ${GeistMono.variable}`}
+    >
       <body
-        className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36
+        className={`bg-gray-50 text-gray-950 relative pt-28 sm:pt-36
       dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
         <div
