@@ -2,7 +2,7 @@
 
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Separator } from "./ui/separator";
 
@@ -21,8 +21,38 @@ const Project = ({
     offset: ["0 1", "1.11 1"],
   });
 
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.3, 0.75]);
-  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.3, 0.75]);
+  const [windowWidth, setWindowWidth] = useState(0);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setWindowWidth(window.innerWidth);
+    }
+
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Add event listener on component mount
+    window.addEventListener("resize", handleResize);
+
+    // Remove event listener on component unmount to avoid memory leaks
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); // Empty dependency array ensures the effect runs only once on mount and cleans up on unmount
+
+  console.log({ windowWidth });
+  const resizeUpTo = windowWidth < 600 ? 0.75 : 1;
+
+  const scaleProgress = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0.3, resizeUpTo]
+  );
+  const opacityProgress = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0.3, resizeUpTo]
+  );
 
   return (
     <motion.div
