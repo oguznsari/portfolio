@@ -18,15 +18,15 @@ const Project = ({
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1.33 1"],
+    offset: ["0 1", "1.11 1"],
   });
 
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.3, 0.75]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.3, 0.75]);
 
   return (
     <motion.div
-      className="group mb-3 sm:mb-8 last:mb-0 max-w-2xl"
+      className="group mb-3 sm:mb-8 last:mb-0 sm:max-w-xs md:max-w-2xl"
       ref={ref}
       style={{
         scale: scaleProgress,
