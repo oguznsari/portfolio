@@ -42,12 +42,12 @@ const Intro = () => {
               quality="95"
               priority={true}
               className="h-30 w-30 object-cover rounded-full
-                            border-[0.35rem] border-white shadow-xl"
+              border-[0.15rem] border-yellow-100 shadow-xl"
             />
           </motion.div>
 
           <motion.span
-            className="text-4xl absolute bottom-2 right-2"
+            className="text-2xl absolute bottom-2 right-2"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
@@ -57,12 +57,12 @@ const Intro = () => {
               duration: 0.75,
             }}
           >
-            👋
+            💻
           </motion.span>
         </div>
       </div>
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-3xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -76,7 +76,7 @@ const Intro = () => {
 
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center
-            gap-3 px-4 text-lg font-medium"
+            gap-5 px-6 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{

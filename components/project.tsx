@@ -4,6 +4,7 @@ import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Separator } from "./ui/separator";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -25,7 +26,7 @@ const Project = ({
 
   return (
     <motion.div
-      className="group mb-3 sm:mb-8 last:mb-0"
+      className="group mb-3 sm:mb-8 last:mb-0 max-w-2xl"
       ref={ref}
       style={{
         scale: scaleProgress,
@@ -43,6 +44,7 @@ const Project = ({
                 pt-4 pb-7 px-5 sm:group-even:ml-[18rem]"
           >
             <h3 className="text-2xl font-semibold font-mono">{title}</h3>
+            <Separator />
             <p className="my-2 leading-relaxed text-gray-700 dark:text-white/70">
               {description}
             </p>

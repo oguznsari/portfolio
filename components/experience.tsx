@@ -10,6 +10,8 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
+import { FaMapPin } from "react-icons/fa6";
+import { Separator } from "./ui/separator";
 
 const Experience = () => {
   const { ref } = useSectionInView("Experience");
@@ -44,10 +46,18 @@ const Experience = () => {
                 fontSize: "1.5rem",
               }}
             >
-              <h3 className="font-semibold capitalize font-mono">
-                {item.title}
-              </h3>
-              <p className="font-normal !mt-0">{item.location}</p>
+              <div className="flex flex-row justify-between items-center">
+                <h3 className="font-semibold capitalize font-mono">
+                  {item.title}
+                </h3>
+
+                <p className="font-normal !mt-0 flex flex-row items-center">
+                  <FaMapPin className="mr-1 text-red-500" />
+                  {item.location}
+                </p>
+              </div>
+
+              <Separator />
               <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
                 {item.description}
               </p>
