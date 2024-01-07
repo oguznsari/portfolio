@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
+import linkedIn from "@/public/linkedin.svg";
+import github from "@/public/github.svg";
 import { HiDownload } from "react-icons/hi";
 
 import myImage from "@/public/formal.jpeg";
@@ -117,7 +119,7 @@ const Intro = () => {
           href="https://www.linkedin.com/in/oguznsari"
           target="_blank"
         >
-          <BsLinkedin />
+          <Image src={linkedIn} alt="LinkedIn" width={20} height={20} />
         </a>
 
         <a
@@ -127,7 +129,7 @@ const Intro = () => {
           href="https://github.com/oguznsari"
           target="_blank"
         >
-          <BsGithub />
+          <Image src={github} alt="LinkedIn" width={20} height={20} />
         </a>
       </motion.div>
     </section>
