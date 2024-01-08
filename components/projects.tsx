@@ -37,24 +37,30 @@ const Projects = () => {
   return (
     <section id="projects" className="scroll-mt-28 mb-28">
       <SectionHeading>My Projects</SectionHeading>
-      <Carousel
-        orientation="horizontal"
-        opts={{
-          align: "start",
-          loop: true,
-        }}
-        className="max-w-2xl mt-20"
-      >
-        <CarouselContent>
-          {projectsData.map((project, index) => (
-            <CarouselItem key={index} className="mb-2">
-              <Project {...project} size={width as Size} />
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
+      {width === Size.SM &&
+        projectsData.map((project, index) => (
+          <Project {...project} size={width as Size} key={index} />
+        ))}
+      {width === Size.MD && (
+        <Carousel
+          orientation="horizontal"
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="max-w-2xl mt-20"
+        >
+          <CarouselContent>
+            {projectsData.map((project, index) => (
+              <CarouselItem key={index} className="mb-2">
+                <Project {...project} size={width as Size} />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
+      )}
     </section>
   );
 };
