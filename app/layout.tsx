@@ -3,10 +3,10 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { GeistSans, GeistMono } from "geist/font";
 import ActiveSectionContextProvider from "@/context/active-section-context";
-import { Toaster } from "react-hot-toast";
 import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
+import { Toaster } from "@/components/ui/sonner";
 
 const thisYear = new Date().getFullYear();
 const yearsOfExperience = thisYear - 2018;
