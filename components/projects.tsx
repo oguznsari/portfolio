@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/carousel";
 
 const Projects = () => {
+  let width: Size = Size.MD;
   const [windowWidth, setWindowWidth] = useState(0);
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -31,14 +32,13 @@ const Projects = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []); // Empty dependency array ensures the effect runs only once on mount and cleans up on unmount
-
-  const width = windowWidth < 700 ? "sm" : "md";
+  width = windowWidth < 600 ? Size.SM : Size.MD;
 
   return (
     <section id="projects" className="scroll-mt-28 mb-28">
       <SectionHeading>My Projects</SectionHeading>
       <Carousel
-        orientation={width === "sm" ? "vertical" : "horizontal"}
+        orientation="horizontal"
         opts={{
           align: "start",
           loop: true,
