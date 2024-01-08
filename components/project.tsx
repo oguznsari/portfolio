@@ -6,7 +6,12 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Separator } from "./ui/separator";
 
-type ProjectProps = (typeof projectsData)[number];
+export enum Size {
+  SM = "sm",
+  MD = "md",
+}
+
+type ProjectProps = (typeof projectsData)[number] & { size: Size };
 
 const Project = ({
   title,
@@ -14,6 +19,7 @@ const Project = ({
   tags,
   imageUrl,
   link,
+  size,
 }: ProjectProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -21,28 +27,7 @@ const Project = ({
     offset: ["0 1", "1.11 1"],
   });
 
-  const [windowWidth, setWindowWidth] = useState(0);
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setWindowWidth(window.innerWidth);
-    }
-
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    // Add event listener on component mount
-    window.addEventListener("resize", handleResize);
-
-    // Remove event listener on component unmount to avoid memory leaks
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []); // Empty dependency array ensures the effect runs only once on mount and cleans up on unmount
-
-  console.log({ windowWidth });
-  const resizeUpTo = windowWidth < 600 ? 0.75 : 1;
-
+  const resizeUpTo = size === "sm" ? 0.75 : 1;
   const scaleProgress = useTransform(
     scrollYProgress,
     [0, 1],
@@ -56,7 +41,7 @@ const Project = ({
 
   return (
     <motion.div
-      className="group mb-3 sm:mb-8 last:mb-0 sm:max-w-xs md:max-w-2xl"
+      className="group mb-3 sm:mb-8 last:mb-0 md:max-w-2xl"
       ref={ref}
       style={{
         scale: scaleProgress,
