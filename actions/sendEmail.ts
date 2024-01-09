@@ -1,9 +1,8 @@
 "use server";
 
-import ContactFormEmail from "@/email/contact-form-email";
 import { getErrorMessage, validateString } from "@/lib/utils";
-import React from "react";
 import { Resend } from "resend";
+import { z } from "zod";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -17,6 +16,8 @@ export const sendEmail = async (formData: FormData) => {
       error: "Invalid serder email",
     };
   }
+
+  const emailSchema = z.string().email();
 
   if (!validateString(message, 5000)) {
     return {
@@ -70,6 +71,8 @@ export const sendEmail = async (formData: FormData) => {
 
   let data;
   try {
+    emailSchema.parse(senderEmail);
+    console.log("Email is valid!");
     data = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
       to: "oguzn.sari@gmail.com" as string,
