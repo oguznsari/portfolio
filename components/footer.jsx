@@ -1,18 +1,14 @@
-
+import { FaRegCopyright } from "react-icons/fa";
 
 const thisYear = new Date().getFullYear();
 
 export default function Footer() {
-    return (
-      <footer className="mb-10 px-4 text-center text-gray-500 font-mono">
-        <small className="mb-2 block text-xs">
-          &copy; {thisYear} Oğuzhan. All rights reserved.
-        </small>
-        <p className="text-xs">
-          <span className="font-semibold">About this website: </span>
-          built with React & Next.js(App Router & Server Actions), TypeScript,
-          Tailwind CSS, Framer Motion, React Email & Resend, Vercel hosting.
-        </p>
-      </footer>
-    );
+  return (
+    <footer className="mb-10 px-4 text-center text-gray-500 font-mono">
+      <small className="mb-2 text-xs flex items-center justify-center gap-2">
+        <FaRegCopyright />
+        {thisYear} Oğuzhan SARI
+      </small>
+    </footer>
+  );
 }
