@@ -6,6 +6,7 @@ import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 import { Badge } from "./ui/badge";
+import { Separator } from "./ui/separator";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -30,7 +31,7 @@ const Skills = () => {
       ref={ref}
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
     >
-      <SectionHeading>My Skills</SectionHeading>
+      <SectionHeading>Skills</SectionHeading>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800 font-mono">
         {skillsData.map((skill, index) => (
           <motion.li
