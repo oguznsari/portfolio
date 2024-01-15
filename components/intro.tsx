@@ -74,8 +74,8 @@ const Intro = () => {
             <em>Oğuzhan</em>.&nbsp;
           </a>
         </span>
-        I&apos;m a <span className="font-bold">Software Engineer</span> with{" "}
-        {yearsOfExperience} years of experience. I enjoy building&nbsp;
+        I&apos;m a Software Engineer with {yearsOfExperience} years of
+        experience. I enjoy building&nbsp;
         <span className="italic">sites & apps</span>. My focus is&nbsp;
         <span className="underline">React (Next.js)</span>
       </motion.h1>
