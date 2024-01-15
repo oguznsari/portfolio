@@ -7,7 +7,7 @@ import Link from "next/link";
 import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
 import linkedIn from "@/public/linkedin.svg";
 import github from "@/public/github.svg";
-import { HiDownload } from "react-icons/hi";
+import { MdFileDownload } from "react-icons/md";
 
 import myImage from "@/public/formal.jpeg";
 import { useSectionInView } from "@/lib/hooks";
@@ -109,7 +109,7 @@ const Intro = () => {
           download
         >
           Download CV{" "}
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+          <MdFileDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
 
         <a
