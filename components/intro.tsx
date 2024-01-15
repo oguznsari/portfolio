@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
+import { FaHandPointRight } from "react-icons/fa6";
 import linkedIn from "@/public/linkedin.svg";
 import github from "@/public/github.svg";
 import { MdFileDownload } from "react-icons/md";
@@ -97,7 +97,7 @@ const Intro = () => {
           }}
         >
           Contact me here
-          <BsArrowRight className="opacity-80 group-hover:translate-x-2 transition" />
+          <FaHandPointRight className="opacity-80 group-hover:translate-x-2 transition" />
         </Link>
 
         <a
