@@ -115,21 +115,33 @@ const Intro = () => {
         <a
           className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full
                     focus:scale-[1.15] hover:scale-[1.15] active:scale-105 hover:text-gray-950 transition
-                    cursor-pointer border border-black/10 dark:bg-white/10 dark:text-white/60"
+                    cursor-pointer border border-black/10 dark:bg-white/10 dark:text-white/60 group"
           href="https://www.linkedin.com/in/oguznsari"
           target="_blank"
         >
-          <Image src={linkedIn} alt="LinkedIn" width={20} height={20} />
+          <Image
+            className="group-focus:scale-[1.5] group-hover:scale-[1.5]"
+            src={linkedIn}
+            alt="LinkedIn"
+            width={20}
+            height={20}
+          />
         </a>
 
         <a
           className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full
                     focus:scale-[1.15] hover:scale-[1.15] active:scale-105 hover:text-gray-950 transition
-                    cursor-pointer border border-black/10 dark:bg-white/10 dark:text-white/60"
+                    cursor-pointer border border-black/10 dark:bg-white/10 dark:text-white/60 group"
           href="https://github.com/oguznsari"
           target="_blank"
         >
-          <Image src={github} alt="LinkedIn" width={20} height={20} />
+          <Image
+            className="group-focus:scale-[1.5] group-hover:scale-[1.5]"
+            src={github}
+            alt="GitHub"
+            width={20}
+            height={20}
+          />
         </a>
       </motion.div>
     </section>
