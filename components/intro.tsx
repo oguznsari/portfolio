@@ -79,13 +79,13 @@ const Intro = () => {
           >
             <em>Oğuzhan</em>
             <sup>
-              <FaInfoCircle className="text-sm text-gray-400 dark:text-white/60" />
+              <FaInfoCircle className="text-xs text-gray-400 dark:text-white/60" />
             </sup>
           </a>
         </span>
         I&apos;m a Software Engineer with {yearsOfExperience} years of
         experience. I enjoy building&nbsp;
-        <span className="italic">sites & apps</span>. My focus is&nbsp;
+        <span className="italic">websites & apps</span>. My focus is&nbsp;
         <span className="underline">React (Next.js)</span>
       </motion.h1>
 
