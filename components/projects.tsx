@@ -48,7 +48,7 @@ const Projects = () => {
             align: "start",
             loop: true,
           }}
-          className="max-w-2xl mt-20"
+          className="max-w-2xl mt-8"
         >
           <CarouselContent>
             {projectsData.map((project, index) => (
