@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 import { FaHandPointRight } from "react-icons/fa6";
+import { FaInfoCircle } from "react-icons/fa";
+
 import linkedIn from "@/public/linkedin.svg";
 import github from "@/public/github.svg";
 import { MdFileDownload } from "react-icons/md";
@@ -68,10 +70,17 @@ const Intro = () => {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span>
-          Hello, I&apos;m&nbsp;
-          <a href="https://en.wikipedia.org/wiki/O%C4%9Fuzhan" target="_blank">
-            <em>Oğuzhan</em>.&nbsp;
+        <span className="flex flex-nowrap items-center justify-center">
+          Hello, I'm&nbsp;
+          <a
+            href="https://en.wikipedia.org/wiki/O%C4%9Fuzhan"
+            target="_blank"
+            className="flex items-center justify-center flex-nowrap hover:scale-[1.05]"
+          >
+            <em>Oğuzhan</em>
+            <sup>
+              <FaInfoCircle className="text-sm text-gray-400 dark:text-white/60" />
+            </sup>
           </a>
         </span>
         I&apos;m a Software Engineer with {yearsOfExperience} years of
