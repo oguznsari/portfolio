@@ -16,6 +16,7 @@ export default function ThemeSwitch() {
       dark:bg-gray-950"
       onClick={toggleTheme}
       type="button"
+      aria-label="Theme swicher"
     >
       {theme === "light" ? <BsSun /> : <BsMoon />}
     </button>
