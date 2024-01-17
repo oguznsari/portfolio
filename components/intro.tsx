@@ -44,7 +44,6 @@ const Intro = () => {
               width="192"
               height="192"
               quality="95"
-              priority={true}
               className="h-30 w-30 object-cover rounded-full
               border-[0.15rem] border-yellow-100 shadow-xl"
               loading="lazy"
