@@ -47,6 +47,7 @@ const Intro = () => {
               priority={true}
               className="h-30 w-30 object-cover rounded-full
               border-[0.15rem] border-yellow-100 shadow-xl"
+              loading="lazy"
             />
           </motion.div>
 
