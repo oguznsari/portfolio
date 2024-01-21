@@ -67,7 +67,7 @@ const Project = ({
               {tags.map((tag, index) => (
                 <li
                   key={index}
-                  className="bg-black/[0.8] px-3 py-1 uppercase text-[0.7rem] tracking-wider 
+                  className="bg-black/[0.9] px-3 py-1 uppercase text-[0.7rem] tracking-wider 
                   text-white rounded-full dark:text-white/70"
                 >
                   {tag}
