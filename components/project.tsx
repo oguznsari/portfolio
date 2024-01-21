@@ -59,15 +59,14 @@ const Project = ({
                 pt-4 pb-7 px-5 sm:group-even:ml-[18rem]"
           >
             <h3 className="text-2xl font-semibold font-mono">{title}</h3>
-            <Separator />
-            <p className="my-2 leading-relaxed text-gray-700 dark:text-white/70">
+            <p className="my-2 leading-relaxed dark:text-white/70">
               {description}
             </p>
             <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
               {tags.map((tag, index) => (
                 <li
                   key={index}
-                  className="bg-black/[0.9] px-3 py-1 uppercase text-[0.7rem] tracking-wider 
+                  className="bg-black px-3 py-1 uppercase text-[0.7rem] tracking-wider 
                   text-white rounded-full dark:text-white/70"
                 >
                   {tag}
