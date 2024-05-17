@@ -98,6 +98,7 @@ export const skillsData = [
   "Node.js",
   "React",
   "Next.js",
+  "GraphQL",
   "MongoDB",
   "Express",
   "Linux",
