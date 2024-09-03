@@ -105,6 +105,7 @@ export const skillsData = [
   "PHP",
   "MySQL",
   "Prisma",
+  "AWS",
   "Docker",
   "Kafka",
   "Redis",
