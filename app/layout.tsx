@@ -1,7 +1,8 @@
 import Header from "@/components/header";
 import "./globals.css";
 import type { Metadata } from "next";
-import { GeistSans, GeistMono } from "geist/font";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
@@ -9,11 +10,11 @@ import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "@/components/ui/sonner";
 
 const thisYear = new Date().getFullYear();
-const yearsOfExperience = thisYear - 2018;
+const yearsOfExperience = thisYear - 2017;
 
 export const metadata: Metadata = {
   title: `Oğuzhan SARI`,
-  description: `Oğuzhan is a full-stack developer with ${yearsOfExperience} years of experience.`,
+  description: `Oğuzhan is a software engineer with ${yearsOfExperience} years of experience building serverless and event-driven systems on AWS.`,
 };
 
 export default function RootLayout({

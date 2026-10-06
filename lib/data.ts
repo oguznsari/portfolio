@@ -1,13 +1,8 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaPlaneDeparture, FaReact, FaServer } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
-import ozbnbImg from "@/public/ozbnb.png";
+import { FaDatabase, FaHeadset, FaPlaneDeparture, FaReact, FaServer } from "react-icons/fa";
 import geniusImg from "@/public/genius.png";
 import eCommerceImg from "@/public/ecommerce.png";
+import ozbnbImg from "@/public/ozbnb.png";
 
 export const links = [
   {
@@ -40,28 +35,44 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Systems Engineer",
+    title: "Software Engineer · Orion Innovation",
+    location: "Istanbul, Turkey",
+    description:
+      "Serverless contact-center for a NASDAQ-listed healthcare company, on Twilio and AWS: Node.js/TypeScript Lambda services and 13 Step Functions workflows (SMS, voice, email, fax, live chat), a CDC mesh (Kinesis → FIFO SQS with DLQs → Kafka) with per-entity ordering and DynamoDB idempotency, a shared CDK WAF (tag-based discovery, fail-on-zero, count-then-block), a Do-Not-Contact service, and React Flex UI.",
+    icon: React.createElement(FaHeadset),
+    date: "Mar 2025 – Present",
+  },
+  {
+    title: "Software Engineer · Orion Innovation",
+    location: "Istanbul, Turkey",
+    description:
+      "Patient portal for a NASDAQ-listed healthcare company, with React, Node.js, MySQL, and Kafka. Improved notification-queue throughput by ~13x and scaled containers from 14 to 8 with no performance loss.",
+    icon: React.createElement(FaReact),
+    date: "May 2024 – Mar 2025",
+  },
+  {
+    title: "Software Engineer · Orion Innovation",
+    location: "Istanbul, Turkey",
+    description:
+      "Telecom provisioning platform for millions of users across 4 regions. Led full-stack CDR features (Next.js, NestJS, PostgreSQL), implemented soft delete that saved ~$20,000 in the first month, cut compute by 60%, and reduced report-generation CPU by 50% with MySQL index and join refactors.",
+    icon: React.createElement(FaServer),
+    date: "Mar 2021 – Apr 2024",
+  },
+  {
+    title: "Software Engineer · Netaş – NetRD",
+    location: "Istanbul, Turkey",
+    description:
+      "LAMP-stack telecom provisioning. Built a SIP analytics pipeline and migrated storage from MongoDB to columnar ClickHouse, cutting query latency by 50%.",
+    icon: React.createElement(FaDatabase),
+    date: "Aug 2020 – Mar 2021",
+  },
+  {
+    title: "Systems Engineer · Cengiz & Saab J.V.",
     location: "Istanbul, Turkey",
     description:
       "I worked as A-SMGCS Systems Engineer in Istanbul New Airport project. Installation and maintenance of Linux servers and workstations on ATC tower. 3rd party system integrations and admin responsibilities.",
     icon: React.createElement(FaPlaneDeparture),
-    date: "2017 - 2020",
-  },
-  {
-    title: "Full-Stack Developer",
-    location: "Istanbul, Turkey",
-    description:
-      "I worked as a full-stack developer for 3 years with LAMP stack. Mainly worked on features & performance improvements with PHP and MySQL on backend features beside UI features.",
-    icon: React.createElement(FaServer),
-    date: "2020 - 2023",
-  },
-  {
-    title: "Full-Stack Developer",
-    location: "Istanbul, Turkey",
-    description:
-      "Working as a full-stack developer with expertise in React, Node.js, Next.js, TypeScript, Tailwind CSS, Prisma, and MongoDB. Currently employed and open to new opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2023 - present",
+    date: "Jun 2017 – Aug 2020",
   },
 ] as const;
 
@@ -93,25 +104,43 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "JavaScript",
   "TypeScript",
+  "JavaScript",
   "Node.js",
   "React",
   "Next.js",
-  "GraphQL",
-  "MongoDB",
+  "NestJS",
   "Express",
-  "Linux",
-  "PHP",
-  "MySQL",
-  "Prisma",
-  "AWS",
-  "Docker",
+  "AWS Lambda",
+  "Step Functions",
+  "SQS",
+  "EventBridge",
+  "Kinesis",
+  "DynamoDB",
+  "AWS CDK",
+  "AWS SAM",
   "Kafka",
+  "MySQL",
+  "PostgreSQL",
   "Redis",
-  "HTML",
-  "CSS",
-  "Tailwind",
+  "MongoDB",
+  "Datadog",
+  "GitLab CI/CD",
+  "Docker",
+  "Linux",
   "Git",
-  "Jira",
+  "Tailwind",
+] as const;
+
+export const certificationsData = [
+  {
+    name: "AWS Certified Solutions Architect – Associate",
+    date: "May 2025",
+    url: "https://cp.certmetrics.com/amazon/en/public/verify/credential/ad9b482e83704ad5b47ef5bb101bdde1",
+  },
+  {
+    name: "AWS Certified Cloud Practitioner",
+    date: "August 2024",
+    url: "https://cp.certmetrics.com/amazon/en/public/verify/credential/ad9b482e83704ad5b47ef5bb101bdde1",
+  },
 ] as const;

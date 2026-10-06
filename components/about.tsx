@@ -22,34 +22,37 @@ const About = () => {
       <SectionHeading>About me</SectionHeading>
       <p className="mb-2">
         After graduating with a degree in Electronics Engineering, I worked as a
-        Systems Engineer for a period. However, I decided to pursue my passion
-        for programming, embarking on my coding journey with{" "}
-        <span className="italic font-bold">Python</span>. I primarily focused on
-        machine learning projects through platforms like Kaggle and completed
-        online courses, including those by Andrew Ng on Coursera.
+        Systems Engineer on the Istanbul New Airport ATC tower — installing and
+        maintaining Linux servers, radars, and third-party network interfaces.
       </p>
       <p className="mb-2">
-        In my initial role as a full-stack web developer, I predominantly used{" "}
-        <span className="italic font-bold">PHP</span> and&nbsp;
-        <span className="italic font-bold">MySQL</span>. After three years of
-        exciting and challenging experiences, I transitioned to a different
-        project, concentrating on technologies like{" "}
-        <span className="italic font-bold">React, TypeScript,</span> and&nbsp;
-        <span className="italic font-bold">NestJS</span>.
+        I then moved into software as a full-stack developer, first on a{" "}
+        <span className="italic font-bold">PHP</span> and{" "}
+        <span className="italic font-bold">MySQL</span> telecom platform
+        (including a{" "}
+        <span className="italic font-bold">ClickHouse</span> analytics
+        migration), then on{" "}
+        <span className="italic font-bold">React, Next.js,</span> and{" "}
+        <span className="italic font-bold">NestJS</span> for a product serving
+        millions of users across four regions.
       </p>
       <p className="mb-2">
-        My favorite aspect of programming is problem-solving. I derive immense
-        satisfaction from tackling complex issues and finding effective
-        solutions. My core technology stack includes{" "}
-        <span className="italic font-bold">React, Next.js, Node.js,</span>{" "}
-        and&nbsp;
-        <span className="italic font-bold">MongoDB</span>
-        {". "}
-        Additionally, I am proficient in{" "}
-        <span className="italic font-bold">TypeScript</span> and&nbsp;
-        <span className="italic font-bold">Prisma.</span> I&nbsp;am always eager
-        to expand my knowledge by exploring new technologies and learning
-        opportunities.
+        I now build platforms for a{" "}
+        <span className="italic font-bold">NASDAQ-listed healthcare</span>{" "}
+        company, including a contact-center on{" "}
+        <span className="italic font-bold">Twilio</span> and{" "}
+        <span className="italic font-bold">AWS</span>
+        {": "}
+        <span className="italic font-bold">
+          Lambda, Step Functions, event pipelines,
+        </span>{" "}
+        and a shared{" "}
+        <span className="italic font-bold">WAF</span> service other APIs opt
+        into. I am an{" "}
+        <span className="italic font-bold">
+          AWS Certified Solutions Architect – Associate
+        </span>
+        .
       </p>
       <p className="mb-2">
         Outside of coding, I find enjoyment in playing video games, watching

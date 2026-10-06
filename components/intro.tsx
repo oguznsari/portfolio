@@ -16,7 +16,7 @@ import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
 const thisYear = new Date().getFullYear();
-const yearsOfExperience = thisYear - 2018;
+const yearsOfExperience = thisYear - 2017;
 
 const Intro = () => {
   const { ref } = useSectionInView("Home", 0.5);
@@ -84,9 +84,10 @@ const Intro = () => {
           </a>
         </span>
         I&apos;m a Software Engineer with {yearsOfExperience} years of
-        experience. I enjoy building&nbsp;
-        <span className="italic">websites & apps</span>. My focus is&nbsp;
-        <span className="underline">React (Next.js)</span>
+        experience. I build&nbsp;
+        <span className="italic">serverless backends & event-driven platforms</span>
+        . My focus is&nbsp;
+        <span className="underline">Node.js/TypeScript on AWS</span>
       </motion.h1>
 
       <motion.div
@@ -119,7 +120,7 @@ const Intro = () => {
                     active:scale-105 transition cursor-pointer border border-black/10
                     dark:bg-white/10 font-mono"
           href="/CV.pdf"
-          download
+          download="Oguzhan-SARI-Resume.pdf"
         >
           Download CV{" "}
           <MdFileDownload className="opacity-60 group-hover:translate-y-1 transition" />

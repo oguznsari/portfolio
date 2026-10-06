@@ -77,7 +77,7 @@ export const sendEmail = async (formData: FormData) => {
       from: "Contact Form <onboarding@resend.dev>",
       to: "oguzn.sari@gmail.com" as string,
       subject: "Message from portfolio website",
-      reply_to: senderEmail as string,
+      replyTo: senderEmail as string,
       html: html,
     });
   } catch (error: unknown) {
