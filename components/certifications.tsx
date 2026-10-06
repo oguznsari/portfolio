@@ -31,10 +31,11 @@ const Certifications = () => {
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
     >
       <SectionHeading>Certifications</SectionHeading>
-      <ul className="flex flex-wrap justify-center gap-4 text-gray-800 font-mono">
+      <ul className="mx-auto grid max-w-xl grid-cols-1 gap-4 sm:grid-cols-2 text-gray-800 font-mono">
         {certificationsData.map((cert, index) => (
           <motion.li
             key={index}
+            className="h-full min-w-0"
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
@@ -47,14 +48,16 @@ const Certifications = () => {
               href={cert.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex w-64 flex-col items-center gap-3 rounded-xl border border-black/[0.1]
+              className="flex h-full w-full flex-col items-center gap-3 rounded-xl border border-black/[0.1]
               bg-white px-5 py-5 transition hover:scale-[1.03] dark:bg-white/10 dark:text-white/80"
             >
               <FaAws
                 className="h-16 w-16 shrink-0 text-[#FF9900]"
                 aria-hidden
               />
-              <span className="text-base leading-snug">{cert.name}</span>
+              <span className="w-full min-h-[4.5rem] text-base leading-snug">
+                {cert.name}
+              </span>
               <span className="text-sm text-gray-500 dark:text-white/50">
                 {cert.date}
               </span>
